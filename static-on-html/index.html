@@ -19,8 +19,18 @@
         gltf-model-next="./assets/buster_drone/scene.gltf"
         rotation="0 180 0"
         animation-mixer
+        animation-set="src: #animations; loop: true; crossFadeDuration: 2"
         scale="0.15 0.15 0.15"
-      />
+      >
+        <a-animation
+          id="animations"
+          attribute="rotation"
+          dur="10000"
+          to="360 0 0"
+          easing="linear"
+          repeat="indefinite"
+        ></a-animation>
+      </a-entity>
       <a-camera gps-camera rotation-reader></a-camera>
     </a-scene>
   </body>
