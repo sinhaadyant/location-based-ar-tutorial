@@ -10,22 +10,18 @@
   </head>
   <body style="margin: 0; overflow: hidden">
     <a-scene
-      vr-mode-ui="enabled: false"
+      vr-mode-ui="enabled: false;"
+      renderer="logarithmicDepthBuffer: true;"
       embedded
-      arjs="sourceType: webcam; debugUIEnabled: true;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: true;"
     >
       <a-text
         value="Test content"
         look-at="[gps-camera]"
-        scale="40 40 40"
+        scale="30 30 30"
         gps-entity-place="latitude: 23.2658877; longitude: 77.4659167;"
       ></a-text>
-      <a-camera
-        rotation-reader
-        look-controls-enabled="true"
-        gps-new-camera="gpsMinDistance: 5"
-      >
-      </a-camera>
+      <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
   </body>
 </html>
